@@ -1,100 +1,166 @@
-//1. Write a program that pushes the vowels into an empty array
+//Promises:
 
-let basic =['a','e','i']
+//Callback hell:
 
-basic.push('o');
-basic.push('u');
+// function data(() => {
+//     return()=> {
+//         return () =>{
 
-console.log(basic);
-
-//task
-//[a-z ] Var 1 = [a-z]
-//var 2 = [Vowels] 
-//var 3 = [ ]
+//         }
+//     }
+// });
 
 
+//1.Pending :
+
+    let firstState =new Promise(() =>{});
+    console.log(firstState)
 
 
-//2 . Write a program to separate positive and negative numbers from the array.
+    //3. Fullfilled state.
 
-function separatePositiveAndNegativeNumbers(arr) {
-    let positiveNumbers = [];
-    let negativeNumbers = [];
+    const fullFilled = new Promise((resolve, reject) => {
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] >= 0) {
-            positiveNumbers.push(arr[i]);
-        } else {
-            negativeNumbers.push(arr[i]);
+    
+
+
+     const a =12;
+     const b =30;
+     const total =a+b;
+     resolve(total);
+    });
+    console.log(fullFilled);
+
+
+    //3. Rejected promise :
+
+    let rejectState = new Promise((resolve, reject) =>{
+        let a =0;
+
+        let b =0;
+
+        reject("rejected primise")
+    });
+
+    console.log(rejectState)
+    
+//1. Resolve promise 
+new Promise((resolve, reject) =>{
+
+
+    const x =20;
+
+    const y =30;
+
+    const total =x+y;
+    resolve(total);
+
+}).then((result) => console.log(result))
+
+
+//Promise Chaning :
+let addition = (num, num1) => {
+        return  new Promise((resolve, reject) => {
+    
+            let sum = num + num1 ;
+    
+            if(sum === 70){
+               resolve(sum)
+            } else {
+               reject("parameters are not same")
+            }
+         })
+    }
+    
+     addition(4, 30).then((result) =>  console.log(result))
+     .catch((err) => console.log(err));
+
+
+     //Async and await;
+
+     console.log("First  thing");
+// .
+     console.log("Second thing")
+
+     setTimeout(() =>{
+
+        console.log(add)
+        console.log("FutureOne")
+        console.log("First Asynchronouse program")
+     },1000)
+     setTimeout(() =>{
+        console.log("Second")
+        console.log("Second Asynchronouse program")
+     },1000)
+
+     console.log("FourthOne ");
+
+     console.log("fifthOne");
+
+     //Async and Await:
+
+
+     //arrow fun:
+     const fullName = async() =>{
+
+     }
+     //fun declaration :
+
+     console.log("first-aa")
+      async function myName(){
+
+        const data = await "MGU";
+        console.log(data)
+
+      }
+      myName()
+
+      console.log("second-aa")
+
+
+      //arrow funvtion:
+
+      const fullName1 =async () => {
+        return "Name"
+      }
+      console.log(fullName1())
+
+
+      //
+
+      const theName =async (num, num1) => {
+        try{
+            const sum = num + num1;
+            if(sum ===10){
+              return sum
+            }
+        }catch(error){
+            console.log(error)
+            
         }
+      }
+
+    //   const responce =theName(2,8)
+
+    const getResponce =async () =>{
+        const data =theName(2,8);
+        console.log(data)
     }
 
-    return {
-        positiveNumbers: positiveNumbers,
-        negativeNumbers: negativeNumbers
-    };
-}
-
-// Example usage
-let numbers = [1, -2, 3, -4, 5, -6, 0];
-let separatedNumbers = separatePositiveAndNegativeNumbers(numbers);
-
-console.log("Positive Numbers: ", separatedNumbers.positiveNumbers);
-console.log("Negative Numbers: ", separatedNumbers.negativeNumbers);
-
-//Write a program that filters that even  or odd numbers from the array
+    getResponce();
 
 
+//API :application progrmming interface
 
-let numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//Application Programming Interface". It's a way
+// for two different programs, or software components, 
+//to communicate with each other. APIs define the protocols and rules for how one component should interact with the other
 
-function separateEvenAndOddNumbers(arr) {
-    let evenNumbers = [];
-    let oddNumbers = [];
+//Crud Operations :
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 === 0) {
-            evenNumbers.push(arr[i]);
-        } else {
-            oddNumbers.push(arr[i]);
-        }
-    }
-
-    return {
-        evenNumbers: evenNumbers,
-        oddNumbers: oddNumbers
-    };
-}
+//Create, Read,Delete, Update
 
 
-let separatedNumbers1 = separateEvenAndOddNumbers(numbers1);
-
-console.log("Even Numbers: ", separatedNumbers1.evenNumbers);
-console.log("Odd Numbers: ", separatedNumbers1.oddNumbers);
-
-
-//4.Write a program to find how many elements exist in the array
-
-let arr = [1, 2,['siri', 32] , "dhanu", 'mgu', { name : 'ajJs' , age: "13" }, true, false, null, undefined];
-
-let lenghthOfArray =arr.length;
-
-console.log(lenghthOfArray);
-
-
-//5.Write a program to loop over an array with some of the elements.
-
-let array =['siri','jaanu','sam','kaju','rakul'];
-
-for(let i=0; i<array.length; i++){
-    let index = array[i];
-    console.log(index);
-}
-
-
-let ar =[2,3,3,4,4,5,5,5,5,4,4,7];
-
-let lengthOfArray =ar.length;
-console.log(lengthOfArray)
+    
 
 
