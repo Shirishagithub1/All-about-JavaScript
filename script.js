@@ -1,123 +1,67 @@
-//1. Write a function that takes an array and returns a new array with the elements in reverse order
+// Diff Types of index positions
 
-    let array = ["siri", "kaju", "jay","dhanu", "sam"]
+//Using String indexOf() Method
 
-    const totalNames =array.reverse();
+// let str = "Welcome to CMR Shopping Mall";
+// let char = "t";
+// let index = str.indexOf(char);
+// console.log(index);
 
-    console.log(totalNames)
-     
-
- //2. Write a function that takes an array and an element, and checks if the element is present in the array.
-
- let array1 = ["siri","keerthi","samantha","kajal"]
-
-let nameIsIncluded = array1.includes("samantha");
-
-console.log(nameIsIncluded)
-
-//3.  Write a function that takes an array and an element, and returns the index of the element in the array. If the element is not found, return -1.
-
-const nms = ['sir','jaya','sri','sath','gan','sri'];
-
-console.log(nms.indexOf('jaya'));
+//Using String search() Method
 
 
-console.log(nms.indexOf('sri',3));
+// let str = "Welcome";
+// let char = "l";
+// let index = str.search(char);
+// console.log(index);
+
+//Using String match() Method
+
+// let str = "Welcome to Nalogonda";
+// let char = "W";
+// let index = str.match(char);
+// console.log(index.index);
 
 
-console.log(nms.indexOf('sam'));
+//Using String lastIndexOf() Method
 
-//4.  Write a function that takes an array, removes the second element, and inserts two new elements in its place. Return the modified array.
-
-
-  let names =["chair","tv","laptop","fan"]
-
-  let removedNames = names.splice(0,2,"A.C","Fridge")
-
- 
-  console.log("Removed Names",removedNames);
-
-  console.log(names);
-
-
-//5.  Write a function that takes an array and returns a new array containing the first three elements.
-
-
-const arr5 = ["siri","jay","kaju","sam"];
-const n = 3;
-const result = arr5.slice(0, n); //(start,end)
-console.log(result); 
-
-//6.  Write a function that takes two arrays and returns a new array that is the concatenation of the two arrays.
-
-let arr =[2,4,6,3,6];
-
-let arr1 =[7,7,4,4];
-
-let totalValues = arr.concat(arr1)
-
-console.log(totalValues);
-
-
-//7.  Write a function that takes an array of strings and returns the array sorted in alphabetical order.
-
-
-let array7 =["siri","babu","jay", "sai","abhi","kaju"];
-
-let namesIsOrder = array7.sort();
-
-console.log(namesIsOrder);
-
-// 8.  Write a function that takes an array of numbers and returns a new array where each number is doubled.
-
-let array2 = ["siri","janu","may","sai"]
-
-let newNames =array2.map((name) =>{
-
-    return 'siri';
-});
-
-console.log(newNames);
-
-
-//9.  Write a function that takes an array of numbers and returns a new array containing only the even numbers.
-
-// Initializing numbers array
-let numbers = [8, 1, 5, 6, 9, 2];
-
-let evenNumbers = numbers.filter(function(element) {
-	return element % 2 === 0;
-});
-
-
-console.log(`Even numbers in an array are: ${evenNumbers}`);
-
-
-// 10. Write a function that takes an array of numbers and returns the sum and multiplication of all the numbers in the array.
-
-let number =[1,9];
-
-let value =number.reduce((accumulator, number) =>{
-   
-
-      return accumulator + number
-},1);
-
-console.log(value)
-
-//multiplication :
-
-let number1 =[1,9];
-
-let value1 =number1.reduce((accumulator, number1) =>{
-   
-
-      return accumulator * number1
-},1);
-
-console.log(value1)
+// let str = "Welcome to Nakrekal";
+// let char = "k";
+// let index = str.lastIndexOf(char);
+// console.log(index);
 
 
 
+
+
+let  device = "LAPTOP";
+
+let  Letter  = device[3];
+
+
+console.log(Letter);
+
+
+let student ="Simha";
+
+
+for(i=0;i<=6;i++){
+
+    let eachLetter =student[i];
+
+    console.log(eachLetter)
+}
+
+
+//Reverse String
+
+numStr="gani"
+for(i=numStr,length-1;i>=0;i--){
+    console.log(numStr[i]);
+}
+
+//Functions
+
+//A JavaScript function is a block of code designed to perform a particular task.
 
 
