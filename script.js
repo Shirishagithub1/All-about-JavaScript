@@ -1,106 +1,146 @@
-//let myName ;  --Variable intialization.
-//let myName ="siri"  -- variable declaration
+//array
+
+let arr =[false,[2,"two"], "siri","it","null","undefined","876987" , { name : "sir",course: "MERN" }];
+  
+
+console.log(arr);
 
 
-//Data types
-//Primitive data type
-// 1) String 
-let myName="siri";
-let rollNumber="1090";
 
-let busNumber ='E70N9';
+console.log
 
-let checkTheData = typeof(myName);
-console.log(checkTheData);
-//nmber data type
-let rollNo =104;
-let emergency=209;
-let siri=2;
-let checkNumberData = typeof(siri);
-console.log(checkNumberData);
+//Arthematic operator
 
- //boolean data type TRUE OR False
- let x =true;
- let y=false;
+let x = 5;
+let y = 7;
+let z = x+y;
+ checkZ = z;
+ console.log(z);
 
 
-  let checkX =typeof(x);
-  console.log(checkX);
+ let a =800;
+ let b =8; 
+ let total = a%b;
+  checkTotal = total;
+  console.log(total); 
+
+ // substraction
+
+ let num = 89;
+ let num2 = 9;
+  
+ let number = num-num2;
+
+ checkNumber = number;
+  
+ console.log(number)
+
+ //multiplication
+
+ let n =20;
+
+ let n1=90;
+
+ let n2=88;
+
+ console.log(n*n1)*n2
 
 
- let isHeGood =0;// False value;
- let isTheGood =1;//True value;
- let checkisHeGoodData=typeof(isHeGood);
- console.log( checkisHeGoodData);
+ //BODMAS  Rule 
+
+ let number1 = 20;
+  let number2  = 22;
+
+  let number3 = 8;
+   let number4 = 14;
+
+   let total1 = (number1 * number3) - (number2 % number4) +number1;
+
+   letTotal1 = total1;
+
+   console.log(total1);
+
+   let sNum = 3;
+   let sNum1 =3;
+
+   let square = sNum **  sNum1;
+   console.log(square)
+
+  //String concatination.
+   //coercion 
 
 
- //BigInt  
- let number=98687638726827524;
- let checkNumber = typeof(number);
- console.log(checkNumber);
+   let sName ="siri"
+  
+   let sName1 = "A";
 
- //Null;
+   let fullName = sName + sName1;
+   console.log(fullName)
+   //string to number
 
- let name=null ;
- let checkNull = typeof(name);
- console.log(checkNull);
+   let name ="siri";
 
- //undefined;
+   let numbers = 20;
 
- let fatherName;   //variable intialization  
-let checkfatherName=typeof(fatherName);
-console.log(checkfatherName);
-//Non-Primitive
- //objects
+   let numbera = 30;
 
- let student = {
-    name : "jaanu",  //string
-    age : 23,  //number
-     isHeGoodPerson : true,
-     isHeGoingToInterview : null,
-     bankbalence :8700,
-     village : "Hyd",
- }
-     let checkTheStudent = typeof(student);
+   let over = numbers + numbera;
 
-     console.log(checkTheStudent)
-    
+   let total3  = name + numbers;
 
 
-     let employee = {
-        name : "Gangothri",  //string
-        age : 23,  //number
-         isHeGoodPerson : false,
-         isHeGoingToInterview : null,  //we dont know 
-         salary :8700,
-         company : 'google',
-     }
-         let checkTheEmployee = typeof(employee)
-    
-         console.log(checkTheEmployee)
+   console.log(total3);
 
+   let total4 =  name + numbers +numbera;
+   console.log(total4);
    
 
+   //number to string
 
-     // Array :
+   let total5 =  numbers + numbera +name;
 
-    //  const cars = ["abc", "bba" ,"sujuki"];
+   console.log(total5);
 
-    //  let checkTheCars = typeof(cars)
+   let total6 =numbers - numbera+name;
 
-    //  console.log(checkTheCars)
+   console.log(total6);
 
-    //non-primitive data type
+   let total7= name-numbers -numbera;
 
-     const cars = ["suzuki","volva" , "Blender"];
+   console.log(total7)
 
-     document.getElementById("demo") .innerHTML=cars;
+   //implicit coercion 
+   let number9 = 9;
+
+   let name9 = "siri";
+
+   let numname =number9 + name9;
+
+   console.log(numname)
+ 
+   let  numberExtra = "10";
+   let sum = number9 + numberExtra;
+   console.log(sum)
 
 
-     const car =[];
-     car[0] ="suzuki";
-     car[1] ="blender";
-     car[2] =" abc";
-     car[3] =" Toyata";
-     document.getElementById("demo") .innerHTML=car;
 
+   //number constructor method
+
+   //explicit coercion
+
+   let sum2=number9 + Number(numberExtra);
+
+   console.log(sum2);
+
+
+   let firstname ="Dhanu";
+
+   let lastname = 20;
+
+   let sub  =firstname + lastname;
+
+   console.log(sub)
+
+   let sub1 = firstname - lastname;
+
+   console.log(sub1)
