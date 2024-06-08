@@ -1,63 +1,72 @@
-myname ="siri"; 
+let college = "MGU" //Global scope
 
-for(let i=0; i<=10; i=i+2){
-console.log(myname,i)
-
-}
-
-//even or odd numbers 0-100;
-
-for(let i = 1; i <=10; i++){
-    if(i % 2 == 1){
-    console.log("odd no ",i);
-}
+if(true){
+    let college ="Mahathma gandhi university"; //Block scope
+    console.log(college);
 
 }
+let college2 = "VDC";  //global scope
+
+console.log(college2)
 
 
-//intro to backticks
+//Diff between var and let and const
 
-let firstName ="siri ";
+var myName = "siri";
 
-let lastName = "ale";
+console.log(myName)
 
-let fullName = `Hello..${firstName}${lastName} age ${4}`;
-console.log(fullName);
+var myName ="Dhanu";
 
+console.log(myName)
 
-let number = '10'
-const  multiply=`multiplication of ${number}- ${number *4}`;
+//Hoisting :
+myName = "siri";
 
-console.log(multiply)
+var myName;
 
-// //tables:
+console.log(myName);
 
-// let table =prompt();//taking the input from user
+//TZD:
 
-// for(let i = 1; i<=10; i++){
-//     let tableValue =`${table} *${1} = ${table*i}`;
+friend ="dhanu";
 
-//     console.log(tableValue);
-// }
+let friend;
 
+console.log(friend);
 
-//while loop :
+const uncle ="uncle name";  //vriable declaration
+console.log(uncle);
 
+//var
 
+var school ="elite"; //global variable
 
-while(i <= 10){
-    if(i % 2 ===0)
-console.log(i);
-i++
-};
+var school ="zphs";
 
 
-let num = 1;
+//let 
 
-do{
-    console.log("hey", num)
-    num++
-} while(num <= 15);
+// let card ="king"; //block level variable
+//  card ="queen";
+//  card ="joker"
+
+//  console.log(card);
+
+
+//constant
+
+const car = "BMW";
+
+car ="suzuki"
+
+console.log(car);
+
+
+
+let institute3 = new string("siri");
+
+console.log(institute3);
 
 
 
