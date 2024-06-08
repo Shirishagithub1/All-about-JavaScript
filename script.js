@@ -1,91 +1,123 @@
-const details =(name) =>{
-    const college =name();
-    const info =`my college name is `+college;
-    return info;
+//1. Write a function that takes an array and returns a new array with the elements in reverse order
 
-}
-let response =details(() =>'MGU');
-console.log(response);
+    let array = ["siri", "kaju", "jay","dhanu", "sam"]
 
+    const totalNames =array.reverse();
 
-//timer
-//1.set interval 
+    console.log(totalNames)
+     
 
-// let number =0;
+ //2. Write a function that takes an array and an element, and checks if the element is present in the array.
 
-// setInterval(function(){  //callbackfun
-//     number++
-//     console.log("Hey",number);
-// }, 100);
-// clearInterval(timer);
+ let array1 = ["siri","keerthi","samantha","kajal"]
 
-//2.set timeout:
+let nameIsIncluded = array1.includes("samantha");
 
-setTimeout(() =>{
-console.log("hello set timeout")
-},100)
+console.log(nameIsIncluded)
+
+//3.  Write a function that takes an array and an element, and returns the index of the element in the array. If the element is not found, return -1.
+
+const nms = ['sir','jaya','sri','sath','gan','sri'];
+
+console.log(nms.indexOf('jaya'));
 
 
-
-const timer  = document.getElementById('timer-count');
-
-timer.textContent = 60;
-
-let clearTimer;
-
-function startTimer(event) {
-
-    // data.setAttribute('disabled', true);
-
-    clearTimer = setInterval(() => {
-        let counter = Number(timer.textContent);
-        counter -= 1;
-
-        timer.textContent = counter;
-        
-        if(counter === 0){
-            clearInterval(clearTimer)
-        }
-        
-    }, 1000)
-}
-
-const stopTimer = () => clearInterval(clearTimer);
+console.log(nms.indexOf('sri',3));
 
 
-//Spread Operator and Rest Operator :
+console.log(nms.indexOf('sam'));
 
-let employee = {
-    name : "Janu",
-    age : 23,
-    study: "BE"
-}
-
-let employee2 = {
-    name2 : "dhanu",
-    age2 : 42,
-    study3: "Btech"
-};
+//4.  Write a function that takes an array, removes the second element, and inserts two new elements in its place. Return the modified array.
 
 
-let Collegues = {
-    ...employee,
-    ...employee2
-}
+  let names =["chair","tv","laptop","fan"]
 
-console.log(Collegues);
+  let removedNames = names.splice(0,2,"A.C","Fridge")
+
+ 
+  console.log("Removed Names",removedNames);
+
+  console.log(names);
 
 
-const employeeDetails ={
-    name :"keerthi",
-    age : 22,
-    isSheGood :true,
-    technology :['java',"testing"]
-}
+//5.  Write a function that takes an array and returns a new array containing the first three elements.
 
-//destructuring:
 
-const {name, ...restOfTheKeys} = employeeDetails;
+const arr5 = ["siri","jay","kaju","sam"];
+const n = 3;
+const result = arr5.slice(0, n); //(start,end)
+console.log(result); 
 
-console.log(name)
-console.log(restOfTheKeys)
+//6.  Write a function that takes two arrays and returns a new array that is the concatenation of the two arrays.
+
+let arr =[2,4,6,3,6];
+
+let arr1 =[7,7,4,4];
+
+let totalValues = arr.concat(arr1)
+
+console.log(totalValues);
+
+
+//7.  Write a function that takes an array of strings and returns the array sorted in alphabetical order.
+
+
+let array7 =["siri","babu","jay", "sai","abhi","kaju"];
+
+let namesIsOrder = array7.sort();
+
+console.log(namesIsOrder);
+
+// 8.  Write a function that takes an array of numbers and returns a new array where each number is doubled.
+
+let array2 = ["siri","janu","may","sai"]
+
+let newNames =array2.map((name) =>{
+
+    return 'siri';
+});
+
+console.log(newNames);
+
+
+//9.  Write a function that takes an array of numbers and returns a new array containing only the even numbers.
+
+// Initializing numbers array
+let numbers = [8, 1, 5, 6, 9, 2];
+
+let evenNumbers = numbers.filter(function(element) {
+	return element % 2 === 0;
+});
+
+
+console.log(`Even numbers in an array are: ${evenNumbers}`);
+
+
+// 10. Write a function that takes an array of numbers and returns the sum and multiplication of all the numbers in the array.
+
+let number =[1,9];
+
+let value =number.reduce((accumulator, number) =>{
+   
+
+      return accumulator + number
+},1);
+
+console.log(value)
+
+//multiplication :
+
+let number1 =[1,9];
+
+let value1 =number1.reduce((accumulator, number1) =>{
+   
+
+      return accumulator * number1
+},1);
+
+console.log(value1)
+
+
+
+
+
