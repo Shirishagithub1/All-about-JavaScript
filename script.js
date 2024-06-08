@@ -1,93 +1,100 @@
-//Api(application programming interface)
+//1. Write a program that pushes the vowels into an empty array
+
+let basic =['a','e','i']
+
+basic.push('o');
+basic.push('u');
+
+console.log(basic);
+
+//task
+//[a-z ] Var 1 = [a-z]
+//var 2 = [Vowels] 
+//var 3 = [ ]
 
 
 
-//4 type of operations :
 
-//Crud (create, read, update, delete)
+//2 . Write a program to separate positive and negative numbers from the array.
 
+function separatePositiveAndNegativeNumbers(arr) {
+    let positiveNumbers = [];
+    let negativeNumbers = [];
 
-//fetch method():
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 0) {
+            positiveNumbers.push(arr[i]);
+        } else {
+            negativeNumbers.push(arr[i]);
+        }
+    }
 
-// const person = {
-//     "name " : "MGU",
-//     "age"    :20,
-//     "course" : "js"
-// }
-
-let bike ={
-    name : "fz",
-    color: "green",
-    price : "2l",
-    comfort: true
+    return {
+        positiveNumbers: positiveNumbers,
+        negativeNumbers: negativeNumbers
+    };
 }
 
-console.log(bike);
+// Example usage
+let numbers = [1, -2, 3, -4, 5, -6, 0];
+let separatedNumbers = separatePositiveAndNegativeNumbers(numbers);
 
-const convertToJson =JSON.stringify(bike);
+console.log("Positive Numbers: ", separatedNumbers.positiveNumbers);
+console.log("Negative Numbers: ", separatedNumbers.negativeNumbers);
 
-console.log(convertToJson)
-
-const convertBackToObj =JSON.parse(convertToJson)
-
-console.log(convertBackToObj);
+//Write a program that filters that even  or odd numbers from the array
 
 
-const gtDataFromDb =async () =>{ //gt operation
 
-    try {
-    
+let numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    const result = await fetch("https://fakestoreapi.com/products");
-    
-    const response =await result.json();
+function separateEvenAndOddNumbers(arr) {
+    let evenNumbers = [];
+    let oddNumbers = [];
 
-    console.log(response)
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            evenNumbers.push(arr[i]);
+        } else {
+            oddNumbers.push(arr[i]);
+        }
+    }
 
-}catch(error){
-    console.log(error)
+    return {
+        evenNumbers: evenNumbers,
+        oddNumbers: oddNumbers
+    };
 }
+
+
+let separatedNumbers1 = separateEvenAndOddNumbers(numbers1);
+
+console.log("Even Numbers: ", separatedNumbers1.evenNumbers);
+console.log("Odd Numbers: ", separatedNumbers1.oddNumbers);
+
+
+//4.Write a program to find how many elements exist in the array
+
+let arr = [1, 2,['siri', 32] , "dhanu", 'mgu', { name : 'ajJs' , age: "13" }, true, false, null, undefined];
+
+let lenghthOfArray =arr.length;
+
+console.log(lenghthOfArray);
+
+
+//5.Write a program to loop over an array with some of the elements.
+
+let array =['siri','jaanu','sam','kaju','rakul'];
+
+for(let i=0; i<array.length; i++){
+    let index = array[i];
+    console.log(index);
 }
-gtDataFromDb()
 
 
-//Dom(Document Object Model)
+let ar =[2,3,3,4,4,5,5,5,5,4,4,7];
 
-//Events : //1.moouse events:
-
-            //click, leave,entter,dbl,scroll,over,up
-           //2.Keyboard events
-
-           //keypress,keydown,keyup
-
-
- const   jsheading =document.getElementById("heading")
-
-
- const button = document .getElementById('btn')
-
-//  let content =  jsheading.textContent;
-
-// let content =jsheading.innerHTML;
-
-button.addEventListener('mouseUp',(event) => jsheading.textContent = "Hey JS");
-
-// button.addEventListener('dblclick',(event) => jsheading.textContent = "Hey Html");
-
-// button.addEventListener('mouseover',(event) => jsheading.textContent = "Hey CSS");
-
-// button.addEventListener('mouseleave',(event) => jsheading.textContent = "Hey Bootstrap");
-
-
-button.addEventListener('click',(event)  => { 
-    
-    jsheading.textContent = "Hey Java";
-    jsheading.style.color ="red";
-    jsheading.style.backgroundColor = "yellow";
-
-    jsheading.style.fontSize  ='45px'
-
-    
-});
+let lengthOfArray =ar.length;
+console.log(lengthOfArray)
 
 
