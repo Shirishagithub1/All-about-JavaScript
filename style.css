@@ -1,0 +1,13 @@
+div{
+    text-align: center;
+    height: 100vh;
+}
+#change{
+    border: 2px;
+}
+#change{
+    border: none;
+    padding: 20px;
+    background-color: red;
+    cursor: pointer;
+}

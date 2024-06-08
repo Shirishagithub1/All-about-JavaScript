@@ -1,198 +1,130 @@
-let heading =document.getElementById('js');
 
-// let content = heading.textContent
-
-// console.log(typeof(content));
-
-// heading.textContent = "mahatma gandhi university"
-
-// heading.style.color ='red';
-
-// set the id
-
-// heading.setAttribute('id' , 'java');
-
-
-// String methods :
-
- let college ='kakatiya junior college';
-
-for(let i =0; i<college.length; i++){
-    console.log(college[i]);
-}
-
-
-//or
-
-for( let string of college){
-    console.log(string)
-}
-// //index positions :
-
-// college = college[0]
-
-
-
-
-// heading.textContent = college;
-
-
-// //slice method
-
-// let university ="mahathma gandhi university";
-
-// university = university.slice(9,16);
-
-// heading.textContent = university;
-
-
-// //UpperCase and Lowercse :
-
-// school = "Krishnaveni";
-
-// school = school.toUpperCase();
-
-
-// heading.textContent = school;
-
-// //length of string :
-
-// device = "Computer"
-
-// device =device.length
-
-// heading.textContent = device;
-
-
-// //ascii value
-// //device =device[0].charCodeAt9();
-
-
-// //cancatinate
-// home = "Sweet Home";
-
-// home = home.concat(home);
-
-// heading.textContent = home;
-
-
-// //endswith , startwith
-
-
-// item = "spoon";
-
-// item = item.endsWith("n"); 
-
-// heading.textContent = item;
-
-
-// //incldes
-
-// items = "chair";
-
-// items = items.include('ch');
-
-// heading.textContent = items;
-
-
-// //repeat();
-
-// company ="Atos";
-
-// company = company.repeat(2);
-
-// heading.textContent = company;
-
-
-// //repeat()
-// college =college.repeat(3);
-
-
-
-//replace the letter or  word
-
-// college = college.replace("ka","hg");
-
-// college =college.replaceAll('k',h)
-
-
-// //sub string
-
-// college = college.substring(0,5)
-
-
-
-
-
-//part of string
-// college = college.lastIndexOf('k')
-
-
-
-
-//Split : devide individual words:
-
-// college = college.split(',')
-
-
-// console.log(college);
-
-
-// heading.textContent = college;
-
-
-
-
-//to string
-// let number =100.113;
-// let numberOne = number.toString();
-
-// console.log(numberOne)
-
-
-
-
-
-
-
-
-//number tofixed:
-
-// let num =3;
-// let number =num.toExponential()
-// heading.textContent = number;
-
-
-//to fixed
-
-//toprision:
-
-
-
-//objects :
-
-let mobile = {
-    company :'relame',
-    price :   30000,
-    ram : 6 ,
-    rom :120,
-    color :'silver'
-
-    
+let Televison ={
+    name : "R20",
+    company : "Vu",
+    price : 20000,
+    quality : 1024,
+    color :['silver','blue','white'],
+    myFullName : function(name){
+         return `My name is ${name}`
+    },
+    address:{
+        house : {
+            house1 :203,
+            house2 : 200,
+        },
+        pincode :508211,
+        village :'nakrekal',
+
+    }
 };
 
-console.log(mobile);
 
-//for accessing the specific value
+//Object Destructuring : 
 
-//dot notation
+let {name,company,color, price, quality } = Televison;
+console.log('Television name is :', name, quality);
 
-let obj =mobile.company
-
-obj = `My Bike is ${mobile.company} ${mobile.name} its price is ${mobile.price}, its gives the mileage of ${mobile.mileage} per liter`;
-
-heading.textContent = obj;
+let myName = Televison.myFullName("Siri");
+let myName1 =Televison.myFullName("Ale");
 
 
+let myRoom = Televison.address.village;
+console.log(myRoom);
+console.log(myName, myName1);
 
 
+//square bracket 
+
+let house = Televison['address']['house']['house1'];
+
+console.log(house);
+
+
+//Global object inbuilt method math :
+
+let minValue =Math.min(10,80);
+
+console.log(minValue);
+
+//Max
+
+let maxValue = Math.max(20,80,567);
+
+console.log(maxValue);
+
+
+//square root
+
+let myNumber = 25;
+
+let checksqrt=Math.sqrt(myNumber);
+
+console.log(checksqrt);
+
+let tan =Math.sin()
+
+//Round :fraction value
+
+let pizza =290.07; 
+
+//final price :291only
+
+
+
+let finalPrice = Math.round(pizza);
+
+console.log(`pizza price is ${finalPrice}`);
+
+//floor :
+
+let watch = 3000.64;
+
+let watchPrice = Math.floor(watch);
+
+console.log(watchPrice);
+
+//ceil :
+
+let watch1 = 3000.64;
+
+let watchPrice1 = Math.ceil(watch1);
+
+console.log(watchPrice1);
+
+
+//Randem Number :
+
+let random =Math.random() *6;
+
+
+let floorTheValue = Math.floor(random);
+console.log(floorTheValue);
+
+
+
+
+//DOM Manipulations
+
+function changecolor(event){
+    // let random =Math.random() * 255;
+    // console.log(random);
+
+    let random1 = Math.random() * 255;
+   let actualValue = Math.floor(random1);
+
+   let random2 = Math.random() * 255;
+    let actualValue2 = Math.floor(random2);
+
+    let random3 = Math.random() * 255;
+     let actualValue3 = Math.floor(random3);
+
+    //  console.log(actualValue,actualValue2,actualValue3);
+
+
+    document.body.style.backgroundColor = `rgb(${actualValue}, ${actualValue2}, ${actualValue3})`
+
+    var color ='yellow';
+    event.style.backgroundColor =color;
+    
+}
